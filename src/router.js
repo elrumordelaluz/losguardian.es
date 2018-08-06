@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Page from "./views/Page.vue";
 
 Vue.use(Router);
 
@@ -10,11 +9,13 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "/demugica"
+      redirect: "demugica"
     },
     {
       path: "/:msg",
-      component: Page
+      component: () => {
+        return import(/* webpackChunkName: "about" */ "./views/Page.vue");
+      }
     }
   ]
 });
