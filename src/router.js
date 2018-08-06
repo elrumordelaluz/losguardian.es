@@ -1,21 +1,20 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
+import Page from './views/Page.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      redirect: "demugica"
+      path: '/',
+      redirect: 'demugica',
     },
     {
-      path: "/:msg",
-      component: () => {
-        return import(/* webpackChunkName: "about" */ "./views/Page.vue");
-      }
-    }
-  ]
-});
+      path: '/:msg',
+      component: Page,
+    },
+  ],
+})
