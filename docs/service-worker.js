@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.15a204a97c28fe55d073e1fab48a7bbf.js"
+  "/precache-manifest.58b6c813cf7a7ea74132dad2c4c777b8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "losguardianes"});
